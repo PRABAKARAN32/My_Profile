@@ -40,7 +40,7 @@ deploy:
       docker images -q | xargs -r docker rmi -f || true;"
 
   script:
-    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker pull prabakaran32/portfolio1790232500:tagname"
-    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker run -d -p 80:5713 prabakaran32/portfolio1790232500:tagname"
+    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker pull prabakaran32/portfolio1790232500"
+    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker run -d -p 80:5713 prabakaran32/portfolio1790232500"
       # - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker pull $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
       # - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker run -d -p 80:5713 $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
