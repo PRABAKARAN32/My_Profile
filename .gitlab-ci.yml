@@ -30,7 +30,7 @@ deploy:
   # dependencies:
   #   - test
   before_script:
-    - cp "$SSH_KEY" > dep.pem
+    - cat "$SSH_KEY" > dep.pem
     - chmod 400 dep.pem
     - mkdir -p ~/.ssh
     - ssh-keyscan "$DEP_IP" >> ~/.ssh/known_hosts
