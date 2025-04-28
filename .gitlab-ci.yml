@@ -18,13 +18,13 @@ build:
     - echo Container Pushed to Docker Registory Successfully
 
 test:
-  only:
+  dependencies:
     - build
   script:
     - echo "Test Successfully Complited"
 
 deploy:
-  only:
+  dependencies:
     - test
   before_script:
     - ssh -i "$SSH_KEY" "$DEP_USER_NAME"@"$DEP_IP" "docker rmi -f \$(docker images -q)"
