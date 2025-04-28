@@ -4,6 +4,7 @@ stages:
   - deploy
 
 build:
+  stage: build
   image: docker:latest
   services:
     - docker:dind
@@ -18,12 +19,14 @@ build:
     - echo Container Pushed to Docker Registory Successfully
 
 test:
+  stage: test
   dependencies:
     - build
   script:
     - echo "Test Successfully Complited"
 
 deploy:
+  stage: deploy
   dependencies:
     - test
   before_script:
