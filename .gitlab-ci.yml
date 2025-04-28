@@ -1,0 +1,33 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  image: dind
+  before_script:
+    - apt-get update -y
+    - echo "$DOCKER_TOKEN" | docker login -u "$DOCKER_USERNAME" --password-stdin
+
+  script:
+    - docker build -t $DOCKER_USERNAME/portfolio$CI_PIPELINE_ID .
+    - docker push $DOCKER_USERNAME/portfolio$CI_PIPELINE_ID
+  after_script:
+    - echo Container Pushed to Docker Registory Successfully
+
+test:
+  only:
+    - build
+  script:
+    - echo "Test Successfully Complited"
+
+deploy:
+  only:
+    - test
+  before_script:
+    - ssh -i "$SSH_KEY" "$DEP_USER_NAME"@"$DEP_IP" "docker rmi -f \$(docker images -q)"
+    # - ssh -i "$SSH_KEY" $DEP_USER_NAME@$DEP_IP
+    # - docker rmi -f $(docker images -q)
+  script:
+    - ssh -i "$SSH_KEY" "$DEP_USER_NAME"@"$DEP_IP" "docker pull $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
+    - ssh -i "$SSH_KEY" "$DEP_USER_NAME"@"$DEP_IP" "docker run -d -p 80:5713 $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
