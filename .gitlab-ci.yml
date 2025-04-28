@@ -3,7 +3,7 @@ stages:
   - test
   - deploy
 
-.build:
+build:
   stage: build
   image: docker:latest
   services:
@@ -18,7 +18,7 @@ stages:
   after_script:
     - echo Container Pushed to Docker Registory Successfully
 
-.test:
+test:
   stage: test
   dependencies:
     - build
