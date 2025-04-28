@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: '0.0.0.0',
-    port: 80,
+    port: 5713,
     // strictPort: false // Allow dynamic port allocation if the desired port is occupied
   }
 })
