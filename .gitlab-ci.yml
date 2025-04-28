@@ -34,7 +34,7 @@ deploy:
     - chmod 400 dep.pem
     - mkdir -p ~/.ssh
     - ssh-keyscan "$DEP_IP" >> ~/.ssh/known_hosts
-    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "$DEP_IP" "
+    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "
       docker ps -q | xargs -r docker stop || true;
       docker ps -a -q | xargs -r docker rm || true;
       docker images -q | xargs -r docker rmi -f || true;"
