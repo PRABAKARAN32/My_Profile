@@ -41,6 +41,6 @@ deploy:
 
   script:
     - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker pull $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
-    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker run -d -p 80:5713 $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
+    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker run -d -p 80:80 $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
       # - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker pull $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
       # - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker run -d -p 80:5713 $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
