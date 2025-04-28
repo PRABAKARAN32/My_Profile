@@ -3,7 +3,7 @@ stages:
   - test
   - deploy
 
-build:
+.build:
   stage: build
   image: docker:latest
   services:
@@ -13,12 +13,12 @@ build:
     - echo "$DOCKER_TOKEN" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
   script:
-    - docker build -t $DOCKER_USERNAME/portfolio$CI_PIPELINE_ID .
-    - docker push $DOCKER_USERNAME/portfolio$CI_PIPELINE_ID
+    - docker build -t $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID .
+    - docker push $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID
   after_script:
     - echo Container Pushed to Docker Registory Successfully
 
-test:
+.test:
   stage: test
   dependencies:
     - build
@@ -40,5 +40,7 @@ deploy:
       docker images -q | xargs -r docker rmi -f || true;"
 
   script:
-    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker pull $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
-    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker run -d -p 80:5713 $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
+    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker pull prabakaran32/portfolio1790232500:tagname"
+    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker run -d -p 80:5713 prabakaran32/portfolio1790232500:tagname"
+      # - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker pull $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
+      # - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker run -d -p 80:5713 $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
