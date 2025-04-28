@@ -3,7 +3,7 @@ stages:
   - test
   - deploy
 
-build:
+.build:
   stage: build
   image: docker:latest
   services:
@@ -18,7 +18,7 @@ build:
   after_script:
     - echo Container Pushed to Docker Registory Successfully
 
-test:
+.test:
   stage: test
   dependencies:
     - build
@@ -27,13 +27,17 @@ test:
 
 deploy:
   stage: deploy
-  dependencies:
-    - test
+  # dependencies:
+  #   - test
   before_script:
     - echo "$SSH_KEY" > dep.pem
+    - chmod 400 dep.pem
+    - ls -la dep.pem
     - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker rmi -f \$(docker images -q)"
     # - ssh -i "$SSH_KEY" $DEP_USER_NAME@$DEP_IP
     # - docker rmi -f $(docker images -q)
   script:
-    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker pull $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
-    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker run -d -p 80:5713 $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
+    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker pull prabakaran32/portfolio1790232500"
+    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker run -d -p 80:5713 prabakaran32/portfolio1790232500"
+      # - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker pull $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
+      # - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker run -d -p 80:5713 $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
