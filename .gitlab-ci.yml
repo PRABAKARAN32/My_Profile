@@ -30,9 +30,11 @@ deploy:
   dependencies:
     - test
   before_script:
-    - ssh -i "$SSH_KEY" "$DEP_USER_NAME"@"$DEP_IP" "docker rmi -f \$(docker images -q)"
+    - echo "$SSH_KEY"" > dep.pem
+    - chmod 400 dep.pem
+    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker rmi -f \$(docker images -q)"
     # - ssh -i "$SSH_KEY" $DEP_USER_NAME@$DEP_IP
     # - docker rmi -f $(docker images -q)
   script:
-    - ssh -i "$SSH_KEY" "$DEP_USER_NAME"@"$DEP_IP" "docker pull $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
-    - ssh -i "$SSH_KEY" "$DEP_USER_NAME"@"$DEP_IP" "docker run -d -p 80:5713 $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
+    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker pull $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
+    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker run -d -p 80:5713 $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
