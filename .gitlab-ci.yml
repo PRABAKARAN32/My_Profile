@@ -4,7 +4,9 @@ stages:
   - deploy
 
 build:
-  image: docker
+  image: docker:latest
+  services:
+    - docker:dind
   before_script:
     # - apt update -y
     - echo "$DOCKER_TOKEN" | docker login -u "$DOCKER_USERNAME" --password-stdin
