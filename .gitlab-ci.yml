@@ -34,13 +34,11 @@ deploy:
     - chmod 400 dep.pem
     - mkdir -p ~/.ssh
     - ssh-keyscan "$DEP_IP" >> ~/.ssh/known_hosts
-    - ls -la dep.pem
-    - cat dep.pem
-    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker rmi -f \$(docker images -q)"
-    # - ssh -i "$SSH_KEY" $DEP_USER_NAME@$DEP_IP
-    # - docker rmi -f $(docker images -q)
+    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "$DEP_IP" "
+      docker ps -q | xargs -r docker stop || true;
+      docker ps -a -q | xargs -r docker rm || true;
+      docker images -q | xargs -r docker rmi -f || true;"
+
   script:
-    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker pull prabakaran32/portfolio1790232500"
-    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker run -d -p 80:5713 prabakaran32/portfolio1790232500"
-      # - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker pull $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
-      # - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker run -d -p 80:5713 $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
+    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker pull $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
+    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker run -d -p 80:5713 $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
