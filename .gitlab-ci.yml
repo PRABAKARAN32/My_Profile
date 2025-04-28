@@ -33,7 +33,7 @@ deploy:
     - echo "$SSH_KEY" > dep.pem
     - chmod 400 dep.pem
     - ls -la dep.pem
-    - cat dep,pem
+    - cat dep.pem
     - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker rmi -f \$(docker images -q)"
     # - ssh -i "$SSH_KEY" $DEP_USER_NAME@$DEP_IP
     # - docker rmi -f $(docker images -q)
