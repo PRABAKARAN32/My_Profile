@@ -30,8 +30,7 @@ deploy:
   dependencies:
     - test
   before_script:
-    - echo "$SSH_KEY"" > dep.pem
-    - chmod 400 dep.pem
+    - echo "$SSH_KEY" > dep.pem
     - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker rmi -f \$(docker images -q)"
     # - ssh -i "$SSH_KEY" $DEP_USER_NAME@$DEP_IP
     # - docker rmi -f $(docker images -q)
