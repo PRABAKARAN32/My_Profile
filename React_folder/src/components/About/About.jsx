@@ -18,16 +18,16 @@ const About = () => {
           </h1>
           {/* Name */}
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
-            Tarun Kaushik
+            Prabakaran
           </h2>
           {/* Skills Heading with Typing Effect */}
           <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
             <span className="text-white">I am a </span>
             <ReactTypingEffect
               text={[
+                'DevOps Engineer',
                 'Fullstack Developer',
-                'App Developer',
-                'UI/UX Designer',
+                'Cloud Engineer',
                 'Coder',
               ]}
               speed={100}
@@ -41,15 +41,14 @@ const About = () => {
           </h3>
           {/* About Me Paragraph */}
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-            I am a full-stack developer with over 2 years of experience in
-            building scalable web applications. Skilled in both front-end and
-            back-end development, I specialize in the MERN stack and other
-            modern technologies to create seamless user experiences and
-            efficient solutions.
+            I am a DevOps Engineer, Full Stack Developer, and UI/UX Developer with hands-on experience in AWS and Azure cloud platforms,
+            as well as Linux environments. Currently in my 3rd year of engineering with a CGPA of 7.53, I specialize in building scalable,
+            efficient solutions using modern technologies, including the MERN stack. Passionate about becoming a leading DevOps Engineer,
+            I am committed to delivering high-quality, seamless user experiences and robust system architectures.
           </p>
           {/* Resume Button */}
           <a
-            href="https://drive.google.com/file/d/1_pLl2wjYVCU-wnqXIhjhYr0YC0SJXvwv/view?usp=sharing"
+            href="https://drive.google.com/file/d/1Q8Od3PqAyL617kcFQSLITLL0cnaMzn8o/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
@@ -60,7 +59,7 @@ const About = () => {
           >
             DOWNLOAD CV
           </a>
-          
+
         </div>
         {/* Right Side */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
@@ -75,7 +74,7 @@ const About = () => {
           >
             <img
               src={profileImage}
-              alt="Tarun Kaushik"
+              alt="Prabakaran"
               className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
             />
           </Tilt>
