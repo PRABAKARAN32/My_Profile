@@ -9,7 +9,6 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import BlurBlob from './components/BlurBlob';
 import Certification from "./components/Certification/Certification";
-import SwiperCoverflow from "./components/Certification/SwiperCoverflow";
 
 const App = () => {
   return (
