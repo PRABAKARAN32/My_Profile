@@ -2,7 +2,7 @@
 FROM node:22.1.0-alpine
 
 # Set working directory
-WORKDIR /app
+WORKDIR /
 
 # Copy package files separately to leverage Docker cache
 COPY React_folder/package.json React_folder/package-lock.json ./
