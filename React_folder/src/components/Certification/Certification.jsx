@@ -1,5 +1,5 @@
 import React from "react";
-import SwiperCoverflow from "./SwiperCoverflow";
+import SwiperCoverflow from "../Certification/SwiperCoverflow";
 
 // Helper function to convert glob import result into usable array
 const importAllCertificates = (importedImages) => {
