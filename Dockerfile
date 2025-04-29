@@ -1,20 +1,26 @@
-# Use official Node.js Alpine image
-FROM node:22.1.0-alpine
+# Build stage
+FROM node:22.1.0-alpine as build
 
-# Set working directory
 WORKDIR /app
 
-# Copy package files separately to leverage Docker cache
-COPY React_folder/package.json React_folder/package-lock.json ./
-
-# Install dependencies
+COPY React_folder/package*.json ./
 RUN npm install
 
-# Copy the rest of the app code
-COPY React_folder/ . 
+COPY React_folder/ .
+RUN npm run build
 
-# Expose the port Vite uses (default 5173)
-EXPOSE 5173
+# Production stage
+FROM node:22.1.0-alpine
 
-# Run development server
-CMD ["npm", "run", "dev"]
+WORKDIR /app
+
+# Install lightweight static server
+RUN npm install -g serve
+
+# Copy built files from previous stage
+COPY --from=build /app/dist /app/dist
+
+EXPOSE 3000
+
+# Serve the built app
+CMD ["serve", "-s", "dist", "-l", "3000"]
