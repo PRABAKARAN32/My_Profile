@@ -4,14 +4,10 @@ import cssLogo from './assets/tech_logo/css.png';
 import sassLogo from './assets/tech_logo/sass.png';
 import javascriptLogo from './assets/tech_logo/javascript.png';
 import reactjsLogo from './assets/tech_logo/reactjs.png';
-// import angularLogo from './assets/tech_logo/angular.png';
-// import reduxLogo from './assets/tech_logo/redux.png';
 import nextjsLogo from './assets/tech_logo/nextjs.png';
 import tailwindcssLogo from './assets/tech_logo/tailwindcss.png';
-// import gsapLogo from './assets/tech_logo/gsap.png';
 import materialuiLogo from './assets/tech_logo/materialui.png';
 import bootstrapLogo from './assets/tech_logo/bootstrap.png';
-// import springbootLogo from './assets/tech_logo/springboot.png';
 import nodejsLogo from './assets/tech_logo/nodejs.png';
 import expressjsLogo from './assets/tech_logo/express.png';
 import mysqlLogo from './assets/tech_logo/mysql.png';
@@ -21,15 +17,9 @@ import cLogo from './assets/tech_logo/c.png';
 import cppLogo from './assets/tech_logo/cpp.png';
 import javaLogo from './assets/tech_logo/java.png';
 import pythonLogo from './assets/tech_logo/python.png';
-// import typescriptLogo from './assets/tech_logo/typescript.png';
 import gitLogo from './assets/tech_logo/git.png';
 import githubLogo from './assets/tech_logo/github.png';
-import vscodeLogo from './assets/tech_logo/vscode.png';
 import postmanLogo from './assets/tech_logo/postman.png';
-// import mcLogo from './assets/tech_logo/mc.png';
-// import figmaLogo from './assets/tech_logo/figma.png';
-// import netlifyLogo from './assets/tech_logo/netlify.png';
-// import vercelLogo from './assets/tech_logo/vercel.png';
 import postgreLogo from './assets/tech_logo/postgre.png';
 import csharpLogo from './assets/tech_logo/csharp.png';
 import phplogo from './assets/tech_logo/php.png';
@@ -49,9 +39,8 @@ import agcLogo from './assets/company_logo/agc_logo.png';
 import newtonschoolLogo from './assets/company_logo/newtonschool_logo.png';
 
 // Education Section Logo's
-import glaLogo from './assets/education_logo/gla_logo.png';
-import bsaLogo from './assets/education_logo/bsa_logo.png';
-import vpsLogo from './assets/education_logo/vps_logo.png';
+import senthil_logo from './assets/education_logo/senthil.png';
+import sona_logo from './assets/education_logo/sona.png';
 
 // Project Section Logo's
 import githubdetLogo from './assets/work_logo/github_det.png';
@@ -120,6 +109,7 @@ export const SkillsInfo = [
       { name: 'Express JS', logo: expressjsLogo },
       { name: 'MySQL', logo: mysqlLogo },
       { name: 'MongoDB', logo: mongodbLogo },
+      { name: 'Postman', logo: postmanLogo },
       { name: 'Firebase', logo: firebaseLogo },
       { name: 'PostgreSQL', logo: postgreLogo },
       { name: 'PHP', logo: phplogo },
@@ -186,39 +176,30 @@ export const experiences = [
 export const education = [
   {
     id: 0,
-    img: glaLogo,
-    school: "GLA University, Mathura",
-    date: "Sept 2022 - July 2024",
-    grade: "7.81 CGPA",
-    desc: "I have completed my Master's degree (MCA) in Computer Applications from GLA University, Mathura. During my time at GLA, I gained a strong foundation in programming, software development, and computer science principles. I have studied courses such as Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Web Development, and Software Engineering. I actively participated in various workshops and technical events, which enhanced my skills and knowledge. My experience at GLA University has been instrumental in shaping my technical abilities and professional growth.",
-    degree: "Master of Computer Applications - MCA",
-  },
-  {
-    id: 1,
-    img: bsaLogo,
-    school: "BSA College, Mathura",
-    date: "Sept 2018 - Aug 2021",
-    grade: "73.2%",
-    desc: "I completed my Bachelor's degree in Computer Science (B.Sc.) from BSA College, Mathura. Throughout my studies, I was immersed in a variety of subjects that deepened my understanding of computing and technology. From exploring Data Structures and Algorithms to diving into Web Development and Database Management Systems, I gained practical insights into the world of software development. My time at BSA College allowed me to work on projects that applied theoretical concepts to real-world problems.",
+    img: sona_logo,
+    school: "Sona College of Technology",
+    date: "Oct 2022 - Aug 2026",
+    grade: "CGPA: 7.56%",
+    desc: "I am currently pursuing my Bachelor's degree in Computer Science and Design (B.E. CSD) at Sona College of Technology, Tamil Nadu.Throughout my academic journey, I have been immersed in a wide range of subjects that have strengthened my understanding of computing, design, and technology. From exploring Data Structures and Algorithms to diving into Web Development, Database Management Systems, and User Experience Design, I have gained both theoretical knowledge and practical insights. My coursework and projects have enabled me to apply concepts to real-world problems, preparing me for challenges in the field of software development and user-centric design.",
     degree: "Bachelor of Science - BSC (Computer Science)",
   },
   {
-    id: 2,
-    img: vpsLogo,
-    school: "Vatsalya Public School Govardhan, Mathura",
-    date: "Apr 2017 - March 2018",
-    grade: "78%",
-    desc: "I completed my class 12 education from Vatsalya Public School, Govardhan, under the CBSE board, where I studied Physics, Chemistry, and Mathematics (PCM) with Computer Science.",
-    degree: "CBSE(XII) - PCM with Computer Science",
+    id: 1,
+    img: senthil_logo,
+    school: "Senthil Matric Higher Secondary School",
+    date: "Jul 2021 - Aprl 2022",
+    grade: "85.6%",
+    desc: "I completed my class 12 education from Senthil Matric Higher Secondary School, Dharmapuri,Tamil Nadu, under the State Board curriculum, where I studied Maths Biology.",
+    degree: "HSC(XII) - Maths Biology",
   },
   {
-    id: 3,
-    img: vpsLogo,
-    school: "Vatsalya Public School Govardhan, Mathura",
-    date: "Apr 2015 - March 2016",
-    grade: "87.5%",
-    desc: "I completed my class 10 education from Vatsalya Public School, Govardhan, under the CBSE board, where I studied Science with Computer.",
-    degree: "CBSE(X), Science with Computer Application",
+    id: 2,
+    img: senthil_logo,
+    school: "Senthil Matric Higher Secondary School",
+    date: "Jun 2019 - March 2020",
+    grade: "96.8%",
+    desc: "I completed my Class 10 education from Senthil Matric Higher Secondary School, Dharmapuri, Tamil Nadu, under the State Board curriculum",
+    degree: "SSLC(X)",
   },
 ];
 
