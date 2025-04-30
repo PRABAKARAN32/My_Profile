@@ -33,10 +33,6 @@ import shell from './assets/tech_logo/shell.png'
 import aws from './assets/tech_logo/aws.png'
 import azure from './assets/tech_logo/azure.png'
 
-// Experience Section Logo's
-import webverseLogo from './assets/company_logo/webverse_logo.png';
-import agcLogo from './assets/company_logo/agc_logo.png';
-import newtonschoolLogo from './assets/company_logo/newtonschool_logo.png';
 
 // Education Section Logo's
 import senthil_logo from './assets/education_logo/senthil.png';
@@ -52,6 +48,8 @@ import webverLogo from './assets/work_logo/web_dig.png';
 import cmLogo from './assets/work_logo/cm.png';
 import imagesearchLogo from './assets/work_logo/image_search.png';
 import removebgLogo from './assets/work_logo/remove_bg.png';
+import empLogo from './assets/project_logo/emp.png'
+import flamesLogo from './assets/project_logo/flames.png'
 
 
 export const SkillsInfo = [
@@ -117,61 +115,61 @@ export const SkillsInfo = [
   },
 ];
 
-export const experiences = [
-  {
-    id: 0,
-    img: webverseLogo,
-    role: "Fullstack Developer",
-    company: "Webverse Digital",
-    date: "April 2024 - Present",
-    desc: "Developed dynamic and scalable web applications using the MERN stack, handling both frontend and backend development. Collaborated with cross-functional teams to build responsive UI, implement RESTful APIs, and optimize application performance in an agile environment.",
-    skills: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React JS",
-      "TypeScript",
-      "Node JS",
-      "Tailwind CSS",
-      "MongoDb",
-      "Redux",
-      " Next Js",
-    ],
-  },
-  {
-    id: 1,
-    img: agcLogo,
-    role: "Fullstack Engineer",
-    company: "Agumentik Group of Companies",
-    date: "July 2023 - March 2024",
-    desc: "Contributed to innovative projects as a Fullstack Engineer, leading both frontend and backend development using technologies such as HTML, CSS, JavaScript, PHP, SQL, Bootstrap, and ReactJS. Worked closely with the team to deliver responsive, high-performance web applications and improve user experience through seamless integration of various technologies.",
-    skills: [
-      "ReactJS",
-      "Redux",
-      "JavaScript",
-      "Tailwind CSS",
-      "HTML",
-      "CSS",
-      "SQL",
-    ],
-  },
-  {
-    id: 2,
-    img: newtonschoolLogo,
-    role: "Frontend Intern",
-    company: "Newton School",
-    date: "September 2021 - August 2022",
-    desc: "Worked as a Frontend Developer Intern, designing and implementing scalable UI components and responsive websites using HTML, CSS, JavaScript, Bootstrap, and Material UI. Collaborated with the design team to translate wireframes and prototypes from Figma into interactive, user-friendly web pages.",
-    skills: [
-      "HTML",
-      "CSS",
-      "Javascript",
-      "Bootstrap",
-      "Figma",
-      "Material UI",
-    ],
-  },
-];
+// export const experiences = [
+//   {
+//     id: 0,
+//     img: webverseLogo,
+//     role: "Fullstack Developer",
+//     company: "Webverse Digital",
+//     date: "April 2024 - Present",
+//     desc: "Developed dynamic and scalable web applications using the MERN stack, handling both frontend and backend development. Collaborated with cross-functional teams to build responsive UI, implement RESTful APIs, and optimize application performance in an agile environment.",
+//     skills: [
+//       "HTML",
+//       "CSS",
+//       "JavaScript",
+//       "React JS",
+//       "TypeScript",
+//       "Node JS",
+//       "Tailwind CSS",
+//       "MongoDb",
+//       "Redux",
+//       " Next Js",
+//     ],
+//   },
+//   {
+//     id: 1,
+//     img: agcLogo,
+//     role: "Fullstack Engineer",
+//     company: "Agumentik Group of Companies",
+//     date: "July 2023 - March 2024",
+//     desc: "Contributed to innovative projects as a Fullstack Engineer, leading both frontend and backend development using technologies such as HTML, CSS, JavaScript, PHP, SQL, Bootstrap, and ReactJS. Worked closely with the team to deliver responsive, high-performance web applications and improve user experience through seamless integration of various technologies.",
+//     skills: [
+//       "ReactJS",
+//       "Redux",
+//       "JavaScript",
+//       "Tailwind CSS",
+//       "HTML",
+//       "CSS",
+//       "SQL",
+//     ],
+//   },
+//   {
+//     id: 2,
+//     img: newtonschoolLogo,
+//     role: "Frontend Intern",
+//     company: "Newton School",
+//     date: "September 2021 - August 2022",
+//     desc: "Worked as a Frontend Developer Intern, designing and implementing scalable UI components and responsive websites using HTML, CSS, JavaScript, Bootstrap, and Material UI. Collaborated with the design team to translate wireframes and prototypes from Figma into interactive, user-friendly web pages.",
+//     skills: [
+//       "HTML",
+//       "CSS",
+//       "Javascript",
+//       "Bootstrap",
+//       "Figma",
+//       "Material UI",
+//     ],
+//   },
+// ];
 
 export const education = [
   {
@@ -206,23 +204,25 @@ export const education = [
 export const projects = [
   {
     id: 0,
-    title: "GitHub Profile Detective",
+    title: "EMP - Email Auto Sender",
     description:
-      "A powerful and user-friendly React.js application designed to uncover and showcase detailed GitHub profile information. Simply enter a GitHub username, and the app fetches comprehensive data, including profile stats, repositories, followers, and contributions. The intuitive interface ensures a seamless experience, making it a must-visit tool for developers and recruiters.",
-    image: githubdetLogo,
-    tags: ["HTML", "CSS", "JavaScript", "React JS", "API"],
-    github: "https://github.com/codingmastr/GitHub-Profile-Search-App-Using-React-JS",
-    webapp: "https://githubprofiledetective.netlify.app/",
+      "EMP is an intelligent email scheduling and automation system designed to simplify the process of sending emails at a specific time without manual intervention. Users can compose an email, select a future date and time, and the system will automatically deliver the email when the scheduled time arrives. This project focuses on increasing productivity, saving time, and ensuring timely communication, whether for personal reminders, business follow-ups, or marketing campaigns.",
+    image: empLogo,
+    tags: ["HTML", "CSS", "JavaScript", "PHP", "API", "SQL", "Linux-Cronjob"],
+    github: "https://gitlab.com/prabakaranabcabc/emp_project.git",
+    webapp: "https://emp.prabakaran.me",
   },
   {
     id: 1,
-    title: "CS Prep",
+    title: "Flames App",
     description:
-      "A full-stack quiz-based platform designed for GATE/UGC NET students to practice previous year questions and create customized tests. The platform offers comprehensive profile stats and detailed results, helping students track and improve their preparation journey effectively.",
-    image: csprepLogo,
-    tags: ["React JS", "Node.js", "MongoDB", "Express", "HTML", "CSS", "JavaScript"],
-    github: "https://github.com/codingmastr/CSPrep",
-    webapp: "https://csprep.netlify.app/",
+      "This is the project I developed using HTML, CSS, and JavaScript to create a FLAMES app. The app takes two names as input and calculates the relationship result based on the traditional FLAMES game logic, offering an interactive and fun user experience with a simple and attractive interface.",
+    image: flamesLogo,
+    tags: ["HTML", "CSS", "Javascript", "Docker", "Apache"],
+    github: "https://gitlab.com/prabakaranabcabc/flames.git",
+    webapp: "https://flames.prabakaran.me/",
+    // TODO: Create a Project and Dockerize and devopsify and redited to cloudflar to https 
+    // NOTE: Update Port in Azure VM
   },
   {
     id: 2,
