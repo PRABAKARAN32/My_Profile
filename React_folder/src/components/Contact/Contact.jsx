@@ -10,15 +10,24 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    // Get the current time
+    const currentTime = new Date().toLocaleTimeString(); // Get time in the format "HH:MM:SS AM/PM"
+
+    // Capture form data
+    const formData = {
+      title: form.current.subject.value,     // Assuming 'subject' as title
+      name: form.current.user_name.value,    // User's name
+      time: currentTime,                     // Set current time dynamically
+      message: form.current.message.value,   // Message from the form
+      email: form.current.user_email.value  // User's email
+    };
+
+    // Send the form submission details to the website owner (User B)
     emailjs
-      .sendForm(
-        "service_axbtt7a",  // Replace with your EmailJS Service ID
-        "template_1ziboq3",  // Replace with your EmailJS Template ID
-        form.current,
-        "Rz7W9pVF0HdDryNNL"  // Replace with your EmailJS Public Key
-      )
+      .send("service_p0651z1", "template_i09l6nb", formData, "vKMI9w1fO8gJZgXUu")  // Your EmailJS Public Key
       .then(
         () => {
+          // After sending the form submission details to the owner, send the thank-you email to the user
           setIsSent(true);
           form.current.reset(); // Reset form fields after sending
           toast.success("Message sent successfully! ✅", {
@@ -98,7 +107,7 @@ const Contact = () => {
             required
             className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
           />
-          
+
           {/* Send Button */}
           <button
             type="submit"
