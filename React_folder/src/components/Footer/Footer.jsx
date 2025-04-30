@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedin, FaReddit, FaGitlab } from "react-icons/fa";
 
 const Footer = () => {
   // Smooth scroll function
@@ -21,7 +21,8 @@ const Footer = () => {
           {[
             { name: "About", id: "about" },
             { name: "Skills", id: "skills" },
-            { name: "Experience", id: "experience" },
+            // { name: "Experience", id: "experience" },
+            { name: "Certification", id: "certification" },
             { name: "Projects", id: "projects" },
             { name: "Education", id: "education" },
           ].map((item, index) => (
@@ -38,11 +39,11 @@ const Footer = () => {
         {/* Social Media Icons - Responsive */}
         <div className="flex flex-wrap justify-center space-x-4 mt-6">
           {[
-            { icon: <FaFacebook />, link: "https://www.facebook.com/tarun.kaushik.3511041/" },
-            { icon: <FaTwitter />, link: "https://twitter.com/CodingMaster6?s=09" },
-            { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/tarun-kaushik-553b441a4" },
-            { icon: <FaInstagram />, link: "https://www.instagram.com/coding_.master/" },
-            { icon: <FaYoutube />, link: "https://www.youtube.com/codingmasteryt" },
+            { icon: <FaFacebook />, link: "https://www.facebook.com/profile.php?id=100054960527874&sk=photos" },
+            { icon: <FaTwitter />, link: "https://x.com/Prabakaran87286" },
+            { icon: <FaReddit />, link: "https://www.reddit.com/user/ProfitNo9091/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button" },
+            { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/prabakaran-j-989982265" },
+            { icon: <FaGitlab />, link: "https://gitlab.com/prabakaranabcabc/" },
 
           ].map((item, index) => (
             <a
