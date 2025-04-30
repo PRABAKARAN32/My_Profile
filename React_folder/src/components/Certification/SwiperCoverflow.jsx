@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow } from "swiper/modules"; // Correct import path for Swiper v9+
 import "swiper/css";
@@ -10,14 +10,33 @@ const SwiperCoverflow = ({ certificates }) => {
     const [showModal, setShowModal] = useState(false); // Manage modal visibility
     const [currentImage, setCurrentImage] = useState(null); // Track the current image
     const swiperRef = React.useRef(null);
+    const [isMobile, setIsMobile] = useState(false);
+
+    // Check if the device is mobile
+    useEffect(() => {
+        const checkMobile = () => {
+            if (window.innerWidth <= 768) { // Standard mobile breakpoint
+                setIsMobile(true);
+            } else {
+                setIsMobile(false);
+            }
+        };
+
+        checkMobile(); // Initial check
+        window.addEventListener("resize", checkMobile); // Update on resize
+
+        return () => window.removeEventListener("resize", checkMobile); // Cleanup on unmount
+    }, []);
 
     // Handle image click: Center the clicked image and show modal
     const handleClick = (index, img) => {
-        setActiveIndex(index); // Update active index
-        setCurrentImage(img); // Set the clicked image for the modal
-        setShowModal(true); // Show the modal
-        if (swiperRef.current) {
-            swiperRef.current.swiper.slideTo(index); // Programmatically move Swiper to the clicked image
+        if (!isMobile) {  // Only trigger the modal if not on mobile
+            setActiveIndex(index); // Update active index
+            setCurrentImage(img); // Set the clicked image for the modal
+            setShowModal(true); // Show the modal
+            if (swiperRef.current) {
+                swiperRef.current.swiper.slideTo(index); // Programmatically move Swiper to the clicked image
+            }
         }
     };
 
@@ -72,7 +91,7 @@ const SwiperCoverflow = ({ certificates }) => {
             </Swiper>
 
             {/* Modal Display */}
-            {showModal && (
+            {showModal && !isMobile && (  // Only display modal if not on mobile
                 <div className="modal-overlay">
                     <div className="modal-content">
                         <img src={currentImage} alt="Certificate" className="modal-image" />
