@@ -26,4 +26,4 @@ docker pull "$DEPLOY_IMAGE"
 
 # Step 3: Run the new container
 echo "Running new container from: $DEPLOY_IMAGE"
-docker run -d -p 80:5173 "$DEPLOY_IMAGE"
+docker run -d -p 80:3000 "$DEPLOY_IMAGE"

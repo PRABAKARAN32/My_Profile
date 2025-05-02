@@ -13,8 +13,12 @@ RUN npm install
 # Copy the rest of the app code
 COPY React_folder/ . 
 
+RUN npm run build
+
+RUN npm install -g serve
+
 # Expose the port Vite uses (default 5173)
-EXPOSE 5173
+EXPOSE 3000
 
 # Run development server
-CMD ["npm", "run", "dev"]
+CMD ["serve", "-s", "dist"]
