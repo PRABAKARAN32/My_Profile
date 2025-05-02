@@ -10,8 +10,7 @@ IMAGE_NAME=$(echo "$DEPLOY_IMAGE" | sed 's/:.*//')
 IMAGE_TAG=$(echo "$DEPLOY_IMAGE" | sed 's/.*://')
 
 # Step 1: Find and stop old containers
-old_containers=$(docker ps -q --filter ancestor=$IMAGE_NAME)
-
+old_containers=$(docker ps --format "{{.ID}} {{.Image}}" | awk -F '[: ]' '$2=="prabakaran32/flames" {print $1}')
 if [ ! -z "$old_containers" ]; then
   echo "Stopping and removing old containers..."
   docker stop $old_containers
