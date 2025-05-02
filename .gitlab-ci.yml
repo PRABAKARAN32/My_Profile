@@ -27,20 +27,20 @@ test:
 
 deploy:
   stage: deploy
-  # dependencies:
-  #   - test
+  dependencies:
+    - test
+  variables:
+    DEPLOY_IMAGE: "$DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
+
   before_script:
     - cat "$SSH_KEY" > dep.pem
     - chmod 400 dep.pem
     - mkdir -p ~/.ssh
+    # - cat scripts/deploy_container.sh
     - ssh-keyscan "$DEP_IP" >> ~/.ssh/known_hosts
-    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "
-      docker ps -q | xargs -r docker stop || true;
-      docker ps -a -q | xargs -r docker rm || true;
-      docker images -q | xargs -r docker rmi -f || true;"
 
+  # In this script we are passing the shill script as the input to the deployement server
   script:
-    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker pull $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
-    - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker run -d -p 80:5713 $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
-      # - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker pull $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
-      # - ssh -i "dep.pem" "$DEP_USER_NAME"@"$DEP_IP" "docker run -d -p 80:5713 $DOCKER_USERNAME/portfolio:$CI_PIPELINE_ID"
+    - cat deploy_container.sh | ssh -i "dep.pem" "$DEP_USER_NAME@$DEP_IP" 'bash -s' "$DEPLOY_IMAGE"
+
+      # - ssh -i "dep.pem" "$DEP_USER_NAME@$DEP_IP" "bash -s < deploy_container.sh $DOCKER_USERNAME/flames"
