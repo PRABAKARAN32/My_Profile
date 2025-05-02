@@ -38,7 +38,8 @@ deploy:
     - mkdir -p ~/.ssh
     # - cat scripts/deploy_container.sh
     - ssh-keyscan "$DEP_IP" >> ~/.ssh/known_hosts
-
+    - cp scripts/deploy_container.sh deploy_container.sh
+    - ls
   # In this script we are passing the shill script as the input to the deployement server
   script:
     - cat deploy_container.sh | ssh -i "dep.pem" "$DEP_USER_NAME@$DEP_IP" 'bash -s' "$DEPLOY_IMAGE"
