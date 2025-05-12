@@ -212,7 +212,7 @@ export const projects = [
     image: flamesLogo,
     tags: ["HTML", "CSS", "Javascript", "Docker", "Apache", "Shell", "CICD-gitlab"],
     github: "https://gitlab.com/prabakaranabcabc/flames.git",
-    webapp: "https://c3d8deb951225181aab7af1ec6eae8b7.serveo.net/",
+    webapp: "https://app.prabakaran.me/",
     // TODO: Create a Project and Dockerize and devopsify and redited to cloudflar to https 
     // NOTE: Update Port in Azure VM
   },
