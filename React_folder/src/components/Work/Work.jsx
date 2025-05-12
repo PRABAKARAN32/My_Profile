@@ -52,7 +52,7 @@ const Work = () => {
               <div className="mb-4">
                 {project.tags.map((tag, index) => (
                   <span
-                    key={index}
+                    key={`${project.id}-${index}`}
                     className="inline-block bg-[#251f38] text-xs font-semibold text-purple-500 rounded-full px-2 py-1 mr-2 mb-2"
                   >
                     {tag}
@@ -95,7 +95,7 @@ const Work = () => {
                 <div className="flex flex-wrap gap-2 mb-6">
                   {selectedProject.tags.map((tag, index) => (
                     <span
-                      key={index}
+                      key={`${selectedProject.id}-${index}`}
                       className="bg-[#251f38] text-xs font-semibold text-purple-500 rounded-full px-2 py-1"
                     >
                       {tag}

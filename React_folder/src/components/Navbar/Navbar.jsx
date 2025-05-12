@@ -125,7 +125,7 @@ const Navbar = () => {
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white"
               >
-                <FaGithub size={24} />
+                <FaGitlab size={24} />
               </a>
               <a
                 href="https://www.linkedin.com/in/tarun-kaushik-553b441a4"
