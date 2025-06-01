@@ -42,6 +42,7 @@ import sona_logo from './assets/education_logo/sona.png';
 import empLogo from './assets/project_logo/emp.png'
 import flamesLogo from './assets/project_logo/flames.png'
 import myprofileLogo from "./assets/project_logo/myprofile.png"
+import todoLogo from "./assets/project_logo/todo.png"
 
 
 export const SkillsInfo = [
@@ -213,11 +214,10 @@ export const projects = [
     tags: ["HTML", "CSS", "Javascript", "Docker", "Apache", "Shell", "CICD-gitlab"],
     github: "https://gitlab.com/prabakaranabcabc/flames.git",
     webapp: "https://app.prabakaran.me/",
-    // TODO: Create a Project and Dockerize and devopsify and redited to cloudflar to https 
-    // NOTE: Update Port in Azure VM
+
   },
   {
-    id: 1,
+    id: 2,
     title: "My-Portfolio",
     description:
       "This is the portfolio website I developed to showcase my skills, projects, and professional background. It offers an interactive and responsive experience, featuring sections like About Me, Skills, Projects, and Contact, all designed with a clean and user-friendly interface to effectively present my work and achievements.",
@@ -225,5 +225,15 @@ export const projects = [
     tags: ["node.js", "react.js", "Javascript", "Docker", "Email.js", "Shell", "CICD-gitlab"],
     github: "https://gitlab.com/prabakaranabcabc/portfolio_with_docker_cicd.git",
     webapp: "prabakaran.me",
+  },
+    {
+    id: 3,
+    title: "TODO App",
+    description:
+      "This is a simple TODO app I developed using React.js, which allows users to create, manage, and organize their tasks efficiently. The app features a user-friendly interface for adding, editing, and deleting tasks, along with functionalities like task completion status and filtering options to enhance productivity and task management.",
+    image: todoLogo,
+    tags: ["node.js", "react.js", "Javascript", "Docker", "Docker-Compose", "Shell", "CICD-gitlab","Kubernetes"],
+    github: "https://gitlab.com/Prabakaran32/todo_devopsfy.git",
+    webapp: "https://todo.prabakaran.me",
   }
 ];  
