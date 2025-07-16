@@ -203,7 +203,7 @@ export const projects = [
     image: empLogo,
     tags: ["HTML", "CSS", "JavaScript", "PHP", "API", "SQL", "Linux-Cronjob", "Shell"],
     github: "https://gitlab.com/prabakaranabcabc/emp_project.git",
-    webapp: "https://emp.prabakaran.me",
+    webapp: "https://emp.prabakaran.tech",
   },
   {
     id: 1,
@@ -213,7 +213,7 @@ export const projects = [
     image: flamesLogo,
     tags: ["HTML", "CSS", "Javascript", "Docker", "Apache", "Shell", "CICD-gitlab"],
     github: "https://gitlab.com/prabakaranabcabc/flames.git",
-    webapp: "https://app.prabakaran.me/",
+    // webapp: "https://app.prabakaran.tech/",
 
   },
   {
@@ -224,7 +224,7 @@ export const projects = [
     image: myprofileLogo,
     tags: ["node.js", "react.js", "Javascript", "Docker", "Email.js", "Shell", "CICD-gitlab"],
     github: "https://gitlab.com/prabakaranabcabc/portfolio_with_docker_cicd.git",
-    webapp: "prabakaran.me",
+    webapp: "prabakaran.tech",
   },
     {
     id: 3,
@@ -234,6 +234,6 @@ export const projects = [
     image: todoLogo,
     tags: ["node.js", "react.js", "Javascript", "Docker", "Docker-Compose", "Shell", "CICD-gitlab","Kubernetes"],
     github: "https://gitlab.com/Prabakaran32/todo_devopsfy.git",
-    webapp: "https://todo.prabakaran.me",
+    // webapp: "https://todo.prabakaran.tech",
   }
 ];  
