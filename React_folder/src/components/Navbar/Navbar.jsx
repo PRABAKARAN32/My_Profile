@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaGitlab, FaLinkedin } from "react-icons/fa";
+import { SiHashnode } from "react-icons/si"; // Hashnode icon
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -84,6 +85,14 @@ const Navbar = () => {
             className="text-gray-300 hover:text-[#8245ec]"
           >
             <FaLinkedin size={24} />
+          </a>
+          <a
+            href="https://prabakaran.hashnode.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-[#8245ec]"
+          >
+            <SiHashnode size={24} />
           </a>
         </div>
 
