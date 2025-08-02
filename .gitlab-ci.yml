@@ -45,3 +45,4 @@ deploy:
     - cat deploy_container.sh | ssh -i "dep.pem" "$DEP_USER_NAME@$DEP_IP" 'bash -s' "$DEPLOY_IMAGE"
 
       # - ssh -i "dep.pem" "$DEP_USER_NAME@$DEP_IP" "bash -s < deploy_container.sh $DOCKER_USERNAME/flames"
+
