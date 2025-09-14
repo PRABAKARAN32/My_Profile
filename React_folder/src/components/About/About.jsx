@@ -42,7 +42,7 @@ const About = () => {
           {/* About Me Paragraph */}
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
             I am a DevOps Engineer, Full Stack Developer, and UI/UX Developer with hands-on experience in AWS and Azure cloud platforms,
-            as well as Linux environments. Currently in my 4th year of engineering with a CGPA of 7.79, I specialize in building scalable,
+            as well as Linux environments. Currently in my 4th year of engineering with a CGPA of 8.00, I specialize in building scalable,
             efficient solutions using modern technologies, including the MERN stack. Passionate about becoming a leading DevOps Engineer,
             I am committed to delivering high-quality, seamless user experiences and robust system architectures.
           </p>

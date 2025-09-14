@@ -170,9 +170,9 @@ export const education = [
     img: sona_logo,
     school: "Sona College of Technology",
     date: "Oct 2022 - Aug 2026",
-    grade: "CGPA: 7.56%",
+    grade: "CGPA: 8.00/10",
     desc: "I am currently pursuing my Bachelor's degree in Computer Science and Design (B.E. CSD) at Sona College of Technology, Tamil Nadu.Throughout my academic journey, I have been immersed in a wide range of subjects that have strengthened my understanding of computing, design, and technology. From exploring Data Structures and Algorithms to diving into Web Development, Database Management Systems, and User Experience Design, I have gained both theoretical knowledge and practical insights. My coursework and projects have enabled me to apply concepts to real-world problems, preparing me for challenges in the field of software development and user-centric design.",
-    degree: "Bachelor of Science - BSC (Computer Science)",
+    degree: "Bachelor of Engineering - B.E. (Computer Science and Design)",
   },
   {
     id: 1,
