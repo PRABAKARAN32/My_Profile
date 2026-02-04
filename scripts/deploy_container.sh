@@ -3,16 +3,17 @@ set -e
 
 echo "Starting deployment..."
 
-cd React_folder
+# cd React_folder
 
-npm install
-npm run build
+# npm install
+# npm run build
+
+pwd
+whoami
 
 cd ..
 
-rm -rf ~/htdocs/Myprofile
-mkdir -p ~/htdocs/Myprofile
+# rm -rf ~/htdocs/Myprofile
+# mkdir -p ~/htdocs/Myprofile
 
-mv React_folder/dist ~/htdocs/Myprofile/files
-
-echo "Deployment completed"
+# echo "Deployment completed"
