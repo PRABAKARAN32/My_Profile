@@ -11,9 +11,8 @@ npm install
 npm run build
 
 mv dist myprofile
-ls
 
-# mv Myprofile "$TARGET_DIR/"
+mv myprofile "$TARGET_DIR/"
 
 # rm -rf /home/$USER/htdocs/Myprofile
 # mv Myprofile /home/$USER/htdocs/Myprofile
