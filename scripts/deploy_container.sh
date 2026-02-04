@@ -2,16 +2,20 @@
 set -e
 
 echo "Starting deployment..."
+echo $USER
 
 # cd React_folder
 
 # npm install
 # npm run build
 
-pwd
-whoami
+# mv dist Myprofile
 
-cd ..
+# rm -rf /home/$USER/htdocs/Myprofile
+# mv Myprofile /home/$USER/htdocs/Myprofile
+
+
+# cd ..
 
 # rm -rf ~/htdocs/Myprofile
 # mkdir -p ~/htdocs/Myprofile
