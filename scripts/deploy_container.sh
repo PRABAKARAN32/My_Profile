@@ -5,20 +5,16 @@ TARGET_DIR="$DEPLOY_WORK"
 
 echo "Starting deployment..."
 
-echo "Deploying to $TARGET_DIR"
+cd React_folder
 
-whoami
+npm install
+npm run build
 
-# cd React_folder
+mkdir -p Myprofile
 
-# npm install
-# npm run build
+mv dist Myprofile
 
-# mkdir -p Myprofile
-
-# mv dist Myprofile
-
-# mv Myprofile "$TARGET_DIR/"
+mv Myprofile "$TARGET_DIR/"
 
 # rm -rf /home/$USER/htdocs/Myprofile
 # mv Myprofile /home/$USER/htdocs/Myprofile
