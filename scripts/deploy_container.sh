@@ -1,18 +1,24 @@
 #!/bin/bash
 set -e
 
+TARGET_DIR="$DEPLOY_WORK"
+
 echo "Starting deployment..."
 
-cd React_folder
+echo "Deploying to $TARGET_DIR"
 
-npm install
-npm run build
+whoami
 
-mkdir -p Myprofile
+# cd React_folder
 
-mv dist Myprofile
+# npm install
+# npm run build
 
-mv Myprofile /home/$USER/htdocs/working
+# mkdir -p Myprofile
+
+# mv dist Myprofile
+
+# mv Myprofile "$TARGET_DIR/"
 
 # rm -rf /home/$USER/htdocs/Myprofile
 # mv Myprofile /home/$USER/htdocs/Myprofile
