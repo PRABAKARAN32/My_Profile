@@ -10,11 +10,10 @@ cd React_folder
 npm install
 npm run build
 
-mkdir -p Myprofile
+mv dist myprofile
+ls
 
-mv dist Myprofile
-
-mv Myprofile "$TARGET_DIR/"
+# mv Myprofile "$TARGET_DIR/"
 
 # rm -rf /home/$USER/htdocs/Myprofile
 # mv Myprofile /home/$USER/htdocs/Myprofile
