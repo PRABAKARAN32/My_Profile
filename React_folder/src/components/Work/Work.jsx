@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { projects } from "../../constants";
 
 const Work = () => {
@@ -11,6 +11,18 @@ const Work = () => {
   const handleCloseModal = () => {
     setSelectedProject(null);
   };
+
+  // Prevent background scroll when modal is open
+  useEffect(() => {
+    if (selectedProject) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [selectedProject]);
 
   return (
     <section
@@ -64,68 +76,82 @@ const Work = () => {
         ))}
       </div>
 
-      {/* Modal Container */}
+      {/* Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4">
-          <div className="bg-gray-900 rounded-xl shadow-2xl lg:w-full w-[90%] max-w-3xl overflow-hidden relative">
-            <div className="flex justify-end p-4">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4"
+          onClick={handleCloseModal}
+        >
+          <div
+            className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto relative border border-purple-500/30"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <div className="sticky top-0 z-10 flex justify-end bg-gray-900 px-4 pt-4 pb-2">
               <button
                 onClick={handleCloseModal}
-                className="text-white text-3xl font-bold hover:text-purple-500"
+                className="text-gray-400 hover:text-purple-400 text-3xl font-bold leading-none transition-colors duration-200"
               >
                 &times;
               </button>
             </div>
 
-            <div className="flex flex-col">
-              <div className="w-full flex justify-center bg-gray-900 px-4">
+            {/* Project Image — respects any aspect ratio */}
+            <div className="w-full px-6">
+              <div className="w-full bg-[#0d0b1e] rounded-xl flex items-center justify-center p-3">
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
-                  className="w-full max-h-[45vh] object-contain rounded-xl shadow-2xl"
+                  className="max-w-full max-h-64 w-auto h-auto object-contain rounded-lg shadow-lg"
                 />
               </div>
-              <div className="lg:p-8 p-6">
-                <h3 className="lg:text-3xl font-bold text-white mb-4 text-md">
-                  {selectedProject.title}
-                </h3>
-                <p className="text-gray-400 mb-6 lg:text-base text-xs">
-                  {selectedProject.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {selectedProject.tags.map((tag, index) => (
-                    <span
-                      key={`${selectedProject.id}-${index}`}
-                      className="bg-[#251f38] text-xs font-semibold text-purple-500 rounded-full px-2 py-1"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <div className={`flex gap-12 ${selectedProject.webapp ? '' : 'justify-center'}`}>
+            </div>
+
+            {/* Project Details */}
+            <div className="p-6">
+              <h3 className="text-2xl font-bold text-white mb-3">
+                {selectedProject.title}
+              </h3>
+
+              <p className="text-gray-400 text-sm leading-relaxed mb-5">
+                {selectedProject.description}
+              </p>
+
+              {/* Tags */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                {selectedProject.tags.map((tag, index) => (
+                  <span
+                    key={`${selectedProject.id}-${index}`}
+                    className="bg-[#251f38] text-xs font-semibold text-purple-400 rounded-full px-3 py-1"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex gap-4">
+                <a
+                  href={selectedProject.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${
+                    selectedProject.webapp ? "w-1/2" : "w-full"
+                  } bg-gray-800 hover:bg-purple-800 text-gray-300 hover:text-white py-2.5 rounded-xl text-sm font-semibold text-center transition-colors duration-200`}
+                >
+                  View Code
+                </a>
+
+                {selectedProject.webapp && (
                   <a
-                    href={selectedProject.github}
+                    href={selectedProject.webapp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`${
-                      selectedProject.webapp ? 'w-1/2' : 'w-full'
-                    } bg-gray-800 hover:bg-purple-800 text-gray-400 lg:px-6 lg:py-2 px-2 py-1 rounded-xl lg:text-xl text-sm font-semibold text-center`}
+                    className="w-1/2 bg-purple-600 hover:bg-purple-700 text-white py-2.5 rounded-xl text-sm font-semibold text-center transition-colors duration-200"
                   >
-                    View Code
+                    View Live
                   </a>
-
-                  {selectedProject.webapp && (
-                    <a
-                      href={selectedProject.webapp}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-1/2 bg-purple-600 hover:bg-purple-800 text-white lg:px-6 lg:py-2 px-2 py-1 rounded-xl lg:text-xl text-sm font-semibold text-center"
-                    >
-                      View Live
-                    </a>
-                  )}
-                </div>
-
+                )}
               </div>
             </div>
           </div>

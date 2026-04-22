@@ -43,6 +43,7 @@ import empLogo from './assets/project_logo/emp.png'
 import flamesLogo from './assets/project_logo/flames.png'
 import myprofileLogo from "./assets/project_logo/myprofile.png"
 import todoLogo from "./assets/project_logo/todo.png"
+import thumblifyLogo from "./assets/project_logo/thumblify.png"
 
 
 export const SkillsInfo = [
@@ -195,8 +196,18 @@ export const education = [
 ];
 
 export const projects = [
-  {
+        {
     id: 0,
+    title: "Thumblify",
+    description:
+      "Thumblify is an AI-powered thumbnail generator built for social media platforms like YouTube, Instagram, and Facebook. You give it a prompt, it gives you a clean, styled thumbnail — simple as that.",
+    image: thumblifyLogo,
+    tags: ["node.js", "react.js", "Javascript", "TypeScript", "MongoDB", "Docker", "Shell", "CICD-gitlab","Kubernetes", "Helm", "Azure Cloud", "Prometheus", "Grafana", "Gemini API", "Cloudinary"],
+    github: "https://gitlab.com/Prabakaran32/todo_devopsfy.git",
+    webapp: "https://thumblify.prabakaran.tech",
+  },
+  {
+    id: 1,
     title: "EMP - Email Auto Sender",
     description:
       "EMP is an intelligent email scheduling and automation system designed to simplify the process of sending emails at a specific time without manual intervention. Users can compose an email, select a future date and time, and the system will automatically deliver the email when the scheduled time arrives. This project focuses on increasing productivity, saving time, and ensuring timely communication, whether for personal reminders, business follow-ups, or marketing campaigns.",
@@ -206,7 +217,7 @@ export const projects = [
     webapp: "https://emp.prabakaran.tech",
   },
   {
-    id: 1,
+    id: 2,
     title: "Flames App",
     description:
       "This is the project I developed using HTML, CSS, and JavaScript to create a FLAMES app. The app takes two names as input and calculates the relationship result based on the traditional FLAMES game logic, offering an interactive and fun user experience with a simple and attractive interface.",
@@ -217,7 +228,7 @@ export const projects = [
 
   },
   {
-    id: 2,
+    id: 3,
     title: "My-Portfolio",
     description:
       "This is the portfolio website I developed to showcase my skills, projects, and professional background. It offers an interactive and responsive experience, featuring sections like About Me, Skills, Projects, and Contact, all designed with a clean and user-friendly interface to effectively present my work and achievements.",
@@ -227,7 +238,7 @@ export const projects = [
     webapp: "prabakaran.tech",
   },
     {
-    id: 3,
+    id: 4,
     title: "TODO App",
     description:
       "This is a simple TODO app I developed using React.js, which allows users to create, manage, and organize their tasks efficiently. The app features a user-friendly interface for adding, editing, and deleting tasks, along with functionalities like task completion status and filtering options to enhance productivity and task management.",
@@ -235,5 +246,5 @@ export const projects = [
     tags: ["node.js", "react.js", "Javascript", "Docker", "Docker-Compose", "Shell", "CICD-gitlab","Kubernetes"],
     github: "https://gitlab.com/Prabakaran32/todo_devopsfy.git",
     // webapp: "https://todo.prabakaran.tech",
-  }
+  },
 ];  
