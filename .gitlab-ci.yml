@@ -1,3 +1,6 @@
+workflow:
+  name: Deploy Portfolio
+
 stages:
   - deploy
 

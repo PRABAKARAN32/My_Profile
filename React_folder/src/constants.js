@@ -203,7 +203,7 @@ export const projects = [
       "Thumblify is an AI-powered thumbnail generator built for social media platforms like YouTube, Instagram, and Facebook. You give it a prompt, it gives you a clean, styled thumbnail — simple as that.",
     image: thumblifyLogo,
     tags: ["node.js", "react.js", "Javascript", "TypeScript", "MongoDB", "Docker", "Shell", "CICD-gitlab","Kubernetes", "Helm", "Azure Cloud", "Prometheus", "Grafana", "Gemini API", "Cloudinary"],
-    github: "https://gitlab.com/Prabakaran32/todo_devopsfy.git",
+    github: "https://gitlab.com/prabakaranabcabc/thumblify.git",
     webapp: "https://thumblify.prabakaran.tech",
   },
   {
