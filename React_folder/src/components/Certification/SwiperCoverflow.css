@@ -14,8 +14,8 @@
     align-items: center;
     z-index: 9999;
     /* Ensure it's on top of all content */
-    opacity: 0;
-    /* Initially hidden */
+    opacity: 1;
+    /* Visible when mounted */
     transition: opacity 0.3s ease-in-out;
     /* Smooth fade-in effect */
 }
@@ -28,8 +28,8 @@
     max-height: 90%;
     /* Limit the height */
     overflow: hidden;
-    transform: scale(0.8);
-    /* Initially smaller */
+    transform: scale(1);
+    /* Full size when mounted */
     transition: transform 0.3s ease-out;
     /* Smooth scaling */
 }
@@ -40,8 +40,8 @@
     height: auto;
     object-fit: contain;
     /* Ensure image is fully contained */
-    opacity: 0;
-    /* Initially hidden */
+    opacity: 1;
+    /* Visible when mounted */
     transition: opacity 0.3s ease-out;
     /* Smooth fade-in effect for image */
 }

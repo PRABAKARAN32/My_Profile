@@ -57,7 +57,7 @@ export const SkillsInfo = [
       { name: "Docker", logo: docker },
       { name: "Linux", logo: linux },
       { name: "CI/CD", logo: cicd },
-      { name: "Teraform", logo: tera },
+      { name: "Terraform", logo: tera },
       { name: "AWS", logo: aws },
       { name: "Azure", logo: azure },
     ],
@@ -179,7 +179,7 @@ export const education = [
     id: 1,
     img: senthil_logo,
     school: "Senthil Matric Higher Secondary School",
-    date: "Jul 2021 - Aprl 2022",
+    date: "Jul 2021 - Apr 2022",
     grade: "85.6%",
     desc: "I completed my class 12 education from Senthil Matric Higher Secondary School, Dharmapuri,Tamil Nadu, under the State Board curriculum, where I studied Maths Biology.",
     degree: "HSC(XII) - Maths Biology",
@@ -199,10 +199,11 @@ export const projects = [
   {
     id: 0,
     title: "DocForge",
-    description: "",
+    description:
+      "DocForge is a local-first documentation sync engine that keeps a RAG knowledge base fresh without wasteful full rebuilds. It crawls documentation sites with Crawl4AI, normalizes each page to markdown, and hashes the content to detect exactly what changed since the last run — deleting stale chunks and re-embedding only new or modified pages. Vector storage is flexible: run Qdrant in Docker, embed it on disk with zero infrastructure, or point at a managed cluster. Local embeddings via fastembed keep everything on-device, with optional GPU acceleration. Beyond the CLI (sync, diff, search, status), DocForge ships an MCP server exposing list_docs and search_docs, letting any MCP-capable LLM client — Claude Code, Claude Desktop, LM Studio — query live, current documentation mid-conversation instead of relying on stale training data.",
     image: docforgeLogo,
     tags: ["python", "MCP", "rag", "embeddings", "vector-search", "opensource"],
-    github: "https://gitlab.com/Prabakaran32/docforge.git",
+    github: "https://github.com/PRABAKARAN32/DocForge.git",
     webapp: "https://pypi.org/project/pydocforge/",
   },
   {
@@ -234,7 +235,8 @@ export const projects = [
   {
     id: 2,
     title: "FlipEarn",
-    description: "",
+    description:
+      "FlipEarn is a full-stack marketplace where users buy and sell social media accounts — Instagram, YouTube, TikTok, and Twitter/X. Sellers list accounts and submit credentials securely; buyers browse listings, chat with sellers, and complete purchases through the platform. An admin panel oversees credential verification, secure handover, transactions, and withdrawals, ensuring trust on both sides of the exchange.Built with React 19, Vite, Redux Toolkit, and Tailwind CSS on the frontend, and Node.js, Express 5, and Prisma ORM on the backend, it uses Neon (serverless PostgreSQL) for data, Clerk for authentication, ImageKit for media, and Inngest for background jobs and webhooks.",
     image: flipearnLogo,
     tags: [
       "React",
@@ -249,7 +251,7 @@ export const projects = [
       "Apache",
       "Shell-Scripting",
     ],
-    github: "https://gitlab.com/Prabakaran32/docforge.git",
+    github: "https://github.com/PRABAKARAN32/FlipEran.git",
     webapp: "https://flipearn.prabakaran.work/",
   },
   {
@@ -306,7 +308,7 @@ export const projects = [
     ],
     github:
       "https://gitlab.com/prabakaranabcabc/portfolio_with_docker_cicd.git",
-    webapp: "prabakaran.work",
+    webapp: "https://prabakaran.work",
   },
   {
     id: 6,

@@ -42,8 +42,7 @@ const SwiperCoverflow = ({ certificates }) => {
 
     // Handle clicking outside of the modal to close it
     const handleOutsideClick = () => {
-        setActiveIndex(null);
-        setShowModal(false); // Close the modal
+        setShowModal(false); // Close the modal (keep the centered slide highlighted)
     };
 
     return (

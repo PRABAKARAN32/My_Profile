@@ -19,7 +19,6 @@ const Footer = () => {
   return (
     <footer className="text-white py-8 px-[12vw] md:px-[7vw] lg:px-[20vw]">
       <div className="container mx-auto text-center">
-
         {/* Name / Logo */}
         <h2 className="text-xl font-semibold text-purple-500">Prabakaran</h2>
 
@@ -29,7 +28,7 @@ const Footer = () => {
             { name: "About", id: "about" },
             { name: "Skills", id: "skills" },
             { name: "Certification", id: "certification" },
-            { name: "Projects", id: "projects" },
+            { name: "Projects", id: "work" },
             { name: "Education", id: "education" },
           ].map((item, index) => (
             <button
