@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow } from "swiper/modules"; // Correct import path for Swiper v9+
 import "swiper/css";
-import "swiper/css/effect-coverflow";
 import './SwiperCoverflow.css'; // Import the CSS file
 
 const SwiperCoverflow = ({ certificates }) => {
@@ -48,21 +46,12 @@ const SwiperCoverflow = ({ certificates }) => {
     return (
         <div onClick={handleOutsideClick}>
             <Swiper
-                effect="coverflow"
-                modules={[EffectCoverflow]} // Correct module inclusion
                 centeredSlides={true}
                 slidesPerView={"auto"}
-                spaceBetween={40}
+                spaceBetween={60}
                 initialSlide={activeIndex} // Start from the middle image
                 onSlideChange={(swiper) => {
                     setActiveIndex(swiper.activeIndex); // Update active index on slide change
-                }}
-                coverflowEffect={{
-                    rotate: 50,
-                    stretch: 0,
-                    depth: 100,
-                    modifier: 1,
-                    slideShadows: false,
                 }}
                 className="swiper-container"
                 ref={swiperRef}
@@ -74,7 +63,7 @@ const SwiperCoverflow = ({ certificates }) => {
                                 e.stopPropagation(); // Prevent click from propagating to the modal background
                                 handleClick(index, cert.img);
                             }}
-                            className={`transition-all duration-500 ease-in-out cursor-pointer rounded-xl overflow-hidden mx-auto ${index === activeIndex ? "scale-[1.25] z-50" : "scale-100"
+                            className={`transition-all duration-500 ease-in-out cursor-pointer rounded-xl overflow-hidden mx-auto ${index === activeIndex ? "scale-[1.1] z-20 opacity-100" : "scale-95 opacity-50"
                                 }`}
                             style={{
                                 width: "100%",
