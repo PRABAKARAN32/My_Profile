@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import { FaGitlab, FaLinkedin } from "react-icons/fa";
+import { FaGitlab, FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiHashnode } from "react-icons/si"; // Hashnode icon
 
 const Navbar = () => {
@@ -73,6 +73,7 @@ const Navbar = () => {
         </ul>
 
         {/* Social Icons */}
+
         <div className="hidden md:flex space-x-4">
           <a
             href="https://gitlab.com/prabakaranabcabc/"
@@ -81,6 +82,14 @@ const Navbar = () => {
             className="text-gray-300 hover:text-[#fc6d26] transition duration-300"
           >
             <FaGitlab size={24} />
+          </a>
+          <a
+            href="https://github.com/PRABAKARAN32"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-[#fc6d26] transition duration-300"
+          >
+            <FaGithub size={24} />
           </a>
           <a
             href="https://www.linkedin.com/in/prabakaran-j-989982265"
