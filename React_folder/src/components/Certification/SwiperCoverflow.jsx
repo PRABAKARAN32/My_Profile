@@ -51,7 +51,7 @@ const SwiperCoverflow = ({ certificates }) => {
                 effect="coverflow"
                 modules={[EffectCoverflow]} // Correct module inclusion
                 centeredSlides={true}
-                slidesPerView={2}
+                slidesPerView={"auto"}
                 spaceBetween={40}
                 initialSlide={activeIndex} // Start from the middle image
                 onSlideChange={(swiper) => {
@@ -74,14 +74,17 @@ const SwiperCoverflow = ({ certificates }) => {
                                 e.stopPropagation(); // Prevent click from propagating to the modal background
                                 handleClick(index, cert.img);
                             }}
-                            className={`transition-all duration-500 ease-in-out cursor-pointer rounded-xl overflow-hidden mx-auto ${index === activeIndex ? "scale-[1.5] z-50" : "scale-100"
+                            className={`transition-all duration-500 ease-in-out cursor-pointer rounded-xl overflow-hidden mx-auto ${index === activeIndex ? "scale-[1.25] z-50" : "scale-100"
                                 }`}
                             style={{
-                                width: "440px",  // Adjusted width for image container
-                                aspectRatio: "4/3",
+                                width: "100%",
+                                maxWidth: "440px",  // Cap width; stays responsive on small screens
+                                aspectRatio: "16 / 9",  // Uniform card shape for every certificate
                                 backgroundImage: `url(${cert.img})`,
-                                backgroundSize: "cover",
+                                backgroundSize: "100% 100%",  // Stretch the full image to fill the card exactly
+                                backgroundRepeat: "no-repeat",
                                 backgroundPosition: "center",
+                                backgroundColor: "#0d0b1e",
                                 boxShadow: index === activeIndex ? "0 0 30px rgba(130, 69, 236, 0.6)" : "none",
                             }}
                         />
@@ -91,9 +94,24 @@ const SwiperCoverflow = ({ certificates }) => {
 
             {/* Modal Display */}
             {showModal && !isMobile && (  // Only display modal if not on mobile
-                <div className="modal-overlay">
-                    <div className="modal-content">
-                        <img src={currentImage} alt="Certificate" className="modal-image" />
+                <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+                    <div
+                        className="relative w-full max-w-5xl rounded-2xl border border-purple-500/40 bg-[#0d0b1e] p-3 shadow-[0_0_40px_rgba(130,69,236,0.5)]"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {/* Close Button */}
+                        <button
+                            onClick={handleOutsideClick}
+                            aria-label="Close"
+                            className="absolute -top-3 -right-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-purple-600 text-white text-2xl font-bold leading-none shadow-lg transition-colors duration-200 hover:bg-purple-700"
+                        >
+                            &times;
+                        </button>
+                        <img
+                            src={currentImage}
+                            alt="Certificate"
+                            className="w-full h-auto max-h-[85vh] object-contain rounded-xl"
+                        />
                     </div>
                 </div>
             )}

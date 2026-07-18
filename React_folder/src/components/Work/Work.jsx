@@ -45,24 +45,26 @@ const Work = () => {
           <div
             key={project.id}
             onClick={() => handleOpenModal(project)}
-            className="border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-purple-500/50 hover:-translate-y-2 transition-transform duration-300"
+            className="flex flex-col border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-purple-500/50 hover:-translate-y-2 transition-transform duration-300"
           >
             <div className="p-4">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-48 object-cover rounded-xl"
-              />
+              <div className="flex items-center justify-center h-48 bg-[#0d0b1e] rounded-xl p-3">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="max-w-full max-h-full w-auto h-auto object-contain rounded-lg"
+                />
+              </div>
             </div>
-            <div className="p-6">
+            <div className="flex flex-col flex-grow p-6">
               <h3 className="text-2xl font-bold text-white mb-2">
                 {project.title}
               </h3>
-              <p className="text-gray-500 mb-4 pt-4 line-clamp-3">
+              <p className="text-gray-500 mb-4 pt-4 line-clamp-3 min-h-[4.5rem]">
                 {project.description}
               </p>
-              <div className="mb-4">
-                {project.tags.map((tag, index) => (
+              <div className="mt-auto">
+                {project.tags.slice(0, 6).map((tag, index) => (
                   <span
                     key={`${project.id}-${index}`}
                     className="inline-block bg-[#251f38] text-xs font-semibold text-purple-500 rounded-full px-2 py-1 mr-2 mb-2"
@@ -70,6 +72,11 @@ const Work = () => {
                     {tag}
                   </span>
                 ))}
+                {project.tags.length > 6 && (
+                  <span className="inline-block bg-[#251f38] text-xs font-semibold text-purple-500 rounded-full px-2 py-1 mr-2 mb-2">
+                    +{project.tags.length - 6}
+                  </span>
+                )}
               </div>
             </div>
           </div>
