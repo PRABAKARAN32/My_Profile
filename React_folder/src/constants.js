@@ -276,7 +276,7 @@ export const projects = [
     ],
     github:
       "https://gitlab.com/prabakaranabcabc/portfolio_with_docker_cicd.git",
-    webapp: "prabakaran.tech",
+    webapp: "prabakaran.work",
   },
   {
     id: 4,
@@ -306,7 +306,7 @@ export const projects = [
       "Shell-Scripting",
     ],
     github: "https://gitlab.com/Prabakaran32/docforge.git",
-    webapp: "https://pypi.org/project/pydocforge/",
+    webapp: "https://flipearn.prabakaran.work/",
   },
   {
     id: 6,
