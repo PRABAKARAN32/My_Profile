@@ -1,110 +1,110 @@
 // Skills Section Logo's
-import htmlLogo from './assets/tech_logo/html.png';
-import cssLogo from './assets/tech_logo/css.png';
-import sassLogo from './assets/tech_logo/sass.png';
-import javascriptLogo from './assets/tech_logo/javascript.png';
-import reactjsLogo from './assets/tech_logo/reactjs.png';
-import nextjsLogo from './assets/tech_logo/nextjs.png';
-import tailwindcssLogo from './assets/tech_logo/tailwindcss.png';
-import materialuiLogo from './assets/tech_logo/materialui.png';
-import bootstrapLogo from './assets/tech_logo/bootstrap.png';
-import nodejsLogo from './assets/tech_logo/nodejs.png';
-import expressjsLogo from './assets/tech_logo/express.png';
-import mysqlLogo from './assets/tech_logo/mysql.png';
-import mongodbLogo from './assets/tech_logo/mongodb.png';
-import firebaseLogo from './assets/tech_logo/firebase.png';
-import cLogo from './assets/tech_logo/c.png';
-import cppLogo from './assets/tech_logo/cpp.png';
-import javaLogo from './assets/tech_logo/java.png';
-import pythonLogo from './assets/tech_logo/python.png';
-import gitLogo from './assets/tech_logo/git.png';
-import githubLogo from './assets/tech_logo/github.png';
-import postmanLogo from './assets/tech_logo/postman.png';
-import postgreLogo from './assets/tech_logo/postgre.png';
-import csharpLogo from './assets/tech_logo/csharp.png';
-import phplogo from './assets/tech_logo/php.png';
-import k8s from './assets/tech_logo/k8s.png'
-import docker from './assets/tech_logo/docker.png'
-import linux from './assets/tech_logo/linux.png'
-import cicd from './assets/tech_logo/cicd.png'
-import tera from './assets/tech_logo/tera.png'
-import go from './assets/tech_logo/go.png'
-import shell from './assets/tech_logo/shell.png'
-import aws from './assets/tech_logo/aws.png'
-import azure from './assets/tech_logo/azure.png'
-
+import htmlLogo from "./assets/tech_logo/html.png";
+import cssLogo from "./assets/tech_logo/css.png";
+import sassLogo from "./assets/tech_logo/sass.png";
+import javascriptLogo from "./assets/tech_logo/javascript.png";
+import reactjsLogo from "./assets/tech_logo/reactjs.png";
+import nextjsLogo from "./assets/tech_logo/nextjs.png";
+import tailwindcssLogo from "./assets/tech_logo/tailwindcss.png";
+import materialuiLogo from "./assets/tech_logo/materialui.png";
+import bootstrapLogo from "./assets/tech_logo/bootstrap.png";
+import nodejsLogo from "./assets/tech_logo/nodejs.png";
+import expressjsLogo from "./assets/tech_logo/express.png";
+import mysqlLogo from "./assets/tech_logo/mysql.png";
+import mongodbLogo from "./assets/tech_logo/mongodb.png";
+import firebaseLogo from "./assets/tech_logo/firebase.png";
+import cLogo from "./assets/tech_logo/c.png";
+import cppLogo from "./assets/tech_logo/cpp.png";
+import javaLogo from "./assets/tech_logo/java.png";
+import pythonLogo from "./assets/tech_logo/python.png";
+import gitLogo from "./assets/tech_logo/git.png";
+import githubLogo from "./assets/tech_logo/github.png";
+import postmanLogo from "./assets/tech_logo/postman.png";
+import postgreLogo from "./assets/tech_logo/postgre.png";
+import csharpLogo from "./assets/tech_logo/csharp.png";
+import phplogo from "./assets/tech_logo/php.png";
+import k8s from "./assets/tech_logo/k8s.png";
+import docker from "./assets/tech_logo/docker.png";
+import linux from "./assets/tech_logo/linux.png";
+import cicd from "./assets/tech_logo/cicd.png";
+import tera from "./assets/tech_logo/tera.png";
+import go from "./assets/tech_logo/go.png";
+import shell from "./assets/tech_logo/shell.png";
+import aws from "./assets/tech_logo/aws.png";
+import azure from "./assets/tech_logo/azure.png";
 
 // Education Section Logo's
-import senthil_logo from './assets/education_logo/senthil.png';
-import sona_logo from './assets/education_logo/sona.png';
+import senthil_logo from "./assets/education_logo/senthil.png";
+import sona_logo from "./assets/education_logo/sona.png";
 
 // Project Section Logo's
-import empLogo from './assets/project_logo/emp.png'
-import flamesLogo from './assets/project_logo/flames.png'
-import myprofileLogo from "./assets/project_logo/myprofile.png"
-import todoLogo from "./assets/project_logo/todo.png"
-import thumblifyLogo from "./assets/project_logo/thumblify.png"
-
+import empLogo from "./assets/project_logo/emp.png";
+import flamesLogo from "./assets/project_logo/flames.png";
+import myprofileLogo from "./assets/project_logo/myprofile.png";
+import todoLogo from "./assets/project_logo/todo.png";
+import thumblifyLogo from "./assets/project_logo/thumblify.png";
+import docforgeLogo from "./assets/project_logo/docforge.png";
+import flipearnLogo from "./assets/project_logo/flipearn.png";
 
 export const SkillsInfo = [
   {
-    title: 'DevOps Tools',
+    title: "DevOps Tools",
     skills: [
       // { name: 'Springboot', logo: springbootLogo },
-      { name: 'Git', logo: gitLogo },
-      { name: 'GitHub', logo: githubLogo },
-      { name: 'K8S', logo: k8s },
-      { name: 'Docker', logo: docker },
-      { name: 'Linux', logo: linux },
-      { name: 'CI/CD', logo: cicd },
-      { name: 'Teraform', logo: tera },
-      { name: 'AWS', logo: aws },
-      { name: 'Azure', logo: azure },
+      { name: "Git", logo: gitLogo },
+      { name: "GitHub", logo: githubLogo },
+      { name: "K8S", logo: k8s },
+      { name: "Docker", logo: docker },
+      { name: "Linux", logo: linux },
+      { name: "CI/CD", logo: cicd },
+      { name: "Teraform", logo: tera },
+      { name: "AWS", logo: aws },
+      { name: "Azure", logo: azure },
     ],
   },
   {
-    title: 'Languages',
+    title: "Languages",
     skills: [
-      { name: 'C', logo: cLogo },
-      { name: 'C++', logo: cppLogo },
-      { name: 'Java', logo: javaLogo },
-      { name: 'Python', logo: pythonLogo },
-      { name: 'C-Sharp', logo: csharpLogo },
-      { name: 'JavaScript', logo: javascriptLogo },
-      { name: 'Golang', logo: go },
-      { name: 'Shell', logo: shell }
+      { name: "C", logo: cLogo },
+      { name: "C++", logo: cppLogo },
+      { name: "Java", logo: javaLogo },
+      { name: "Python", logo: pythonLogo },
+      { name: "C-Sharp", logo: csharpLogo },
+      { name: "JavaScript", logo: javascriptLogo },
+      { name: "Golang", logo: go },
+      { name: "Shell", logo: shell },
       // { name: 'TypeScript', logo: typescriptLogo },
     ],
   },
   {
-    title: 'Frontend',
+    title: "Frontend",
     skills: [
-      { name: 'HTML', logo: htmlLogo },
-      { name: 'CSS', logo: cssLogo },
-      { name: 'SASS', logo: sassLogo },
-      { name: 'JavaScript', logo: javascriptLogo },
-      { name: 'React JS', logo: reactjsLogo },
+      { name: "HTML", logo: htmlLogo },
+      { name: "CSS", logo: cssLogo },
+      { name: "SASS", logo: sassLogo },
+      { name: "JavaScript", logo: javascriptLogo },
+      { name: "React JS", logo: reactjsLogo },
       // { name: 'Angular', logo: angularLogo },
       // { name: 'Redux', logo: reduxLogo },
-      { name: 'Next JS', logo: nextjsLogo },
-      { name: 'Tailwind CSS', logo: tailwindcssLogo },
+      { name: "Next JS", logo: nextjsLogo },
+      { name: "Tailwind CSS", logo: tailwindcssLogo },
       // { name: 'GSAP', logo: gsapLogo },
-      { name: 'Material UI', logo: materialuiLogo },
-      { name: 'Bootstrap', logo: bootstrapLogo },
+      { name: "Material UI", logo: materialuiLogo },
+      { name: "Bootstrap", logo: bootstrapLogo },
     ],
   },
   {
-    title: 'Backend',
+    title: "Backend",
     skills: [
       // { name: 'Springboot', logo: springbootLogo },
-      { name: 'Node JS', logo: nodejsLogo },
-      { name: 'Express JS', logo: expressjsLogo },
-      { name: 'MySQL', logo: mysqlLogo },
-      { name: 'MongoDB', logo: mongodbLogo },
-      { name: 'Postman', logo: postmanLogo },
-      { name: 'Firebase', logo: firebaseLogo },
-      { name: 'PostgreSQL', logo: postgreLogo },
-      { name: 'PHP', logo: phplogo },
+      { name: "Node JS", logo: nodejsLogo },
+      { name: "Express JS", logo: expressjsLogo },
+      { name: "MySQL", logo: mysqlLogo },
+      { name: "MongoDB", logo: mongodbLogo },
+      { name: "Postman", logo: postmanLogo },
+      { name: "Firebase", logo: firebaseLogo },
+      { name: "PostgreSQL", logo: postgreLogo },
+      { name: "PHP", logo: phplogo },
     ],
   },
 ];
@@ -196,15 +196,31 @@ export const education = [
 ];
 
 export const projects = [
-        {
+  {
     id: 0,
     title: "Thumblify",
     description:
       "Thumblify is an AI-powered thumbnail generator built for social media platforms like YouTube, Instagram, and Facebook. You give it a prompt, it gives you a clean, styled thumbnail — simple as that.",
     image: thumblifyLogo,
-    tags: ["node.js", "react.js", "Javascript", "TypeScript", "MongoDB", "Docker", "Shell", "CICD-gitlab","Kubernetes", "Helm", "Azure Cloud", "Prometheus", "Grafana", "Gemini API", "Cloudinary"],
+    tags: [
+      "node.js",
+      "react.js",
+      "Javascript",
+      "TypeScript",
+      "MongoDB",
+      "Docker",
+      "Shell",
+      "CICD-gitlab",
+      "Kubernetes",
+      "Helm",
+      "Azure Cloud",
+      "Prometheus",
+      "Grafana",
+      "Gemini API",
+      "Cloudinary",
+    ],
     github: "https://gitlab.com/prabakaranabcabc/thumblify.git",
-    webapp: "https://thumblify.prabakaran.tech",
+    webapp: "https://thumblify.prabakaran.work",
   },
   {
     id: 1,
@@ -212,9 +228,18 @@ export const projects = [
     description:
       "EMP is an intelligent email scheduling and automation system designed to simplify the process of sending emails at a specific time without manual intervention. Users can compose an email, select a future date and time, and the system will automatically deliver the email when the scheduled time arrives. This project focuses on increasing productivity, saving time, and ensuring timely communication, whether for personal reminders, business follow-ups, or marketing campaigns.",
     image: empLogo,
-    tags: ["HTML", "CSS", "JavaScript", "PHP", "API", "SQL", "Linux-Cronjob", "Shell"],
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "PHP",
+      "API",
+      "SQL",
+      "Linux-Cronjob",
+      "Shell",
+    ],
     github: "https://gitlab.com/prabakaranabcabc/emp_project.git",
-    webapp: "https://emp.prabakaran.tech",
+    // webapp: "https://emp.prabakaran.tech",
   },
   {
     id: 2,
@@ -222,10 +247,17 @@ export const projects = [
     description:
       "This is the project I developed using HTML, CSS, and JavaScript to create a FLAMES app. The app takes two names as input and calculates the relationship result based on the traditional FLAMES game logic, offering an interactive and fun user experience with a simple and attractive interface.",
     image: flamesLogo,
-    tags: ["HTML", "CSS", "Javascript", "Docker", "Apache", "Shell", "CICD-gitlab"],
+    tags: [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Docker",
+      "Apache",
+      "Shell",
+      "CICD-gitlab",
+    ],
     github: "https://gitlab.com/prabakaranabcabc/flames.git",
     // webapp: "https://app.prabakaran.tech/",
-
   },
   {
     id: 3,
@@ -233,18 +265,66 @@ export const projects = [
     description:
       "This is the portfolio website I developed to showcase my skills, projects, and professional background. It offers an interactive and responsive experience, featuring sections like About Me, Skills, Projects, and Contact, all designed with a clean and user-friendly interface to effectively present my work and achievements.",
     image: myprofileLogo,
-    tags: ["node.js", "react.js", "Javascript", "Docker", "Email.js", "Shell", "CICD-gitlab"],
-    github: "https://gitlab.com/prabakaranabcabc/portfolio_with_docker_cicd.git",
+    tags: [
+      "node.js",
+      "react.js",
+      "Javascript",
+      "Docker",
+      "Email.js",
+      "Shell",
+      "CICD-gitlab",
+    ],
+    github:
+      "https://gitlab.com/prabakaranabcabc/portfolio_with_docker_cicd.git",
     webapp: "prabakaran.tech",
   },
-    {
+  {
     id: 4,
+    title: "DocForge",
+    description: "",
+    image: docforgeLogo,
+    tags: ["python", "MCP", "rag", "embeddings", "vector-search", "opensource"],
+    github: "https://gitlab.com/Prabakaran32/docforge.git",
+    webapp: "https://pypi.org/project/pydocforge/",
+  },
+  {
+    id: 5,
+    title: "FlipEarn",
+    description: "",
+    image: flipearnLogo,
+    tags: [
+      "React",
+      "Vite",
+      "TailwindCSS",
+      "Node.js",
+      "Express.js",
+      "REST API",
+      "Postgres",
+      "CICD",
+      "GitLab",
+      "Apache",
+      "Shell-Scripting",
+    ],
+    github: "https://gitlab.com/Prabakaran32/docforge.git",
+    webapp: "https://pypi.org/project/pydocforge/",
+  },
+  {
+    id: 6,
     title: "TODO App",
     description:
       "This is a simple TODO app I developed using React.js, which allows users to create, manage, and organize their tasks efficiently. The app features a user-friendly interface for adding, editing, and deleting tasks, along with functionalities like task completion status and filtering options to enhance productivity and task management.",
     image: todoLogo,
-    tags: ["node.js", "react.js", "Javascript", "Docker", "Docker-Compose", "Shell", "CICD-gitlab","Kubernetes"],
+    tags: [
+      "node.js",
+      "react.js",
+      "Javascript",
+      "Docker",
+      "Docker-Compose",
+      "Shell",
+      "CICD-gitlab",
+      "Kubernetes",
+    ],
     github: "https://gitlab.com/Prabakaran32/todo_devopsfy.git",
     // webapp: "https://todo.prabakaran.tech",
   },
-];  
+];
