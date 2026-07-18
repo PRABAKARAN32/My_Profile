@@ -198,6 +198,15 @@ export const education = [
 export const projects = [
   {
     id: 0,
+    title: "DocForge",
+    description: "",
+    image: docforgeLogo,
+    tags: ["python", "MCP", "rag", "embeddings", "vector-search", "opensource"],
+    github: "https://gitlab.com/Prabakaran32/docforge.git",
+    webapp: "https://pypi.org/project/pydocforge/",
+  },
+  {
+    id: 1,
     title: "Thumblify",
     description:
       "Thumblify is an AI-powered thumbnail generator built for social media platforms like YouTube, Instagram, and Facebook. You give it a prompt, it gives you a clean, styled thumbnail — simple as that.",
@@ -223,72 +232,7 @@ export const projects = [
     webapp: "https://thumblify.prabakaran.work",
   },
   {
-    id: 1,
-    title: "EMP - Email Auto Sender",
-    description:
-      "EMP is an intelligent email scheduling and automation system designed to simplify the process of sending emails at a specific time without manual intervention. Users can compose an email, select a future date and time, and the system will automatically deliver the email when the scheduled time arrives. This project focuses on increasing productivity, saving time, and ensuring timely communication, whether for personal reminders, business follow-ups, or marketing campaigns.",
-    image: empLogo,
-    tags: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "PHP",
-      "API",
-      "SQL",
-      "Linux-Cronjob",
-      "Shell",
-    ],
-    github: "https://gitlab.com/prabakaranabcabc/emp_project.git",
-    // webapp: "https://emp.prabakaran.tech",
-  },
-  {
     id: 2,
-    title: "Flames App",
-    description:
-      "This is the project I developed using HTML, CSS, and JavaScript to create a FLAMES app. The app takes two names as input and calculates the relationship result based on the traditional FLAMES game logic, offering an interactive and fun user experience with a simple and attractive interface.",
-    image: flamesLogo,
-    tags: [
-      "HTML",
-      "CSS",
-      "Javascript",
-      "Docker",
-      "Apache",
-      "Shell",
-      "CICD-gitlab",
-    ],
-    github: "https://gitlab.com/prabakaranabcabc/flames.git",
-    // webapp: "https://app.prabakaran.tech/",
-  },
-  {
-    id: 3,
-    title: "My-Portfolio",
-    description:
-      "This is the portfolio website I developed to showcase my skills, projects, and professional background. It offers an interactive and responsive experience, featuring sections like About Me, Skills, Projects, and Contact, all designed with a clean and user-friendly interface to effectively present my work and achievements.",
-    image: myprofileLogo,
-    tags: [
-      "node.js",
-      "react.js",
-      "Javascript",
-      "Docker",
-      "Email.js",
-      "Shell",
-      "CICD-gitlab",
-    ],
-    github:
-      "https://gitlab.com/prabakaranabcabc/portfolio_with_docker_cicd.git",
-    webapp: "prabakaran.work",
-  },
-  {
-    id: 4,
-    title: "DocForge",
-    description: "",
-    image: docforgeLogo,
-    tags: ["python", "MCP", "rag", "embeddings", "vector-search", "opensource"],
-    github: "https://gitlab.com/Prabakaran32/docforge.git",
-    webapp: "https://pypi.org/project/pydocforge/",
-  },
-  {
-    id: 5,
     title: "FlipEarn",
     description: "",
     image: flipearnLogo,
@@ -307,6 +251,62 @@ export const projects = [
     ],
     github: "https://gitlab.com/Prabakaran32/docforge.git",
     webapp: "https://flipearn.prabakaran.work/",
+  },
+  {
+    id: 3,
+    title: "EMP - Email Auto Sender",
+    description:
+      "EMP is an intelligent email scheduling and automation system designed to simplify the process of sending emails at a specific time without manual intervention. Users can compose an email, select a future date and time, and the system will automatically deliver the email when the scheduled time arrives. This project focuses on increasing productivity, saving time, and ensuring timely communication, whether for personal reminders, business follow-ups, or marketing campaigns.",
+    image: empLogo,
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "PHP",
+      "API",
+      "SQL",
+      "Linux-Cronjob",
+      "Shell",
+    ],
+    github: "https://gitlab.com/prabakaranabcabc/emp_project.git",
+    // webapp: "https://emp.prabakaran.tech",
+  },
+  {
+    id: 4,
+    title: "Flames App",
+    description:
+      "This is the project I developed using HTML, CSS, and JavaScript to create a FLAMES app. The app takes two names as input and calculates the relationship result based on the traditional FLAMES game logic, offering an interactive and fun user experience with a simple and attractive interface.",
+    image: flamesLogo,
+    tags: [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Docker",
+      "Apache",
+      "Shell",
+      "CICD-gitlab",
+    ],
+    github: "https://gitlab.com/prabakaranabcabc/flames.git",
+    // webapp: "https://app.prabakaran.tech/",
+  },
+  {
+    id: 5,
+    title: "My-Portfolio",
+    description:
+      "This is the portfolio website I developed to showcase my skills, projects, and professional background. It offers an interactive and responsive experience, featuring sections like About Me, Skills, Projects, and Contact, all designed with a clean and user-friendly interface to effectively present my work and achievements.",
+    image: myprofileLogo,
+    tags: [
+      "node.js",
+      "react.js",
+      "Javascript",
+      "Docker",
+      "Email.js",
+      "Shell",
+      "CICD-gitlab",
+    ],
+    github:
+      "https://gitlab.com/prabakaranabcabc/portfolio_with_docker_cicd.git",
+    webapp: "prabakaran.work",
   },
   {
     id: 6,
