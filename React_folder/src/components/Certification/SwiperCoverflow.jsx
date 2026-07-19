@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import './SwiperCoverflow.css'; // Import the CSS file
 
@@ -33,7 +34,7 @@ const SwiperCoverflow = ({ certificates }) => {
             setCurrentImage(img); // Set the clicked image for the modal
             setShowModal(true); // Show the modal
             if (swiperRef.current) {
-                swiperRef.current.swiper.slideTo(index); // Programmatically move Swiper to the clicked image
+                swiperRef.current.swiper.slideToLoop(index); // Move to clicked image (loop-aware)
             }
         }
     };
@@ -46,12 +47,19 @@ const SwiperCoverflow = ({ certificates }) => {
     return (
         <div onClick={handleOutsideClick}>
             <Swiper
+                modules={[Autoplay]}
+                loop={true}
+                autoplay={{
+                    delay: 2500,                 // Auto-change every 2.5s
+                    disableOnInteraction: false, // Keep auto-playing after user interaction
+                    pauseOnMouseEnter: true,     // Pause while hovering
+                }}
                 centeredSlides={true}
                 slidesPerView={"auto"}
                 spaceBetween={60}
                 initialSlide={activeIndex} // Start from the middle image
                 onSlideChange={(swiper) => {
-                    setActiveIndex(swiper.activeIndex); // Update active index on slide change
+                    setActiveIndex(swiper.realIndex); // realIndex ignores loop clones
                 }}
                 className="swiper-container"
                 ref={swiperRef}
@@ -63,7 +71,11 @@ const SwiperCoverflow = ({ certificates }) => {
                                 e.stopPropagation(); // Prevent click from propagating to the modal background
                                 handleClick(index, cert.img);
                             }}
-                            className={`transition-all duration-500 ease-in-out cursor-pointer rounded-xl overflow-hidden mx-auto ${index === activeIndex ? "scale-[1.1] z-20 opacity-100" : "scale-95 opacity-50"
+                            className={`transition-all duration-500 ease-in-out cursor-pointer rounded-xl overflow-hidden mx-auto
+                                hover:scale-110 hover:opacity-100 hover:z-30 hover:shadow-[0_0_35px_rgba(130,69,236,0.7)]
+                                ${index === activeIndex
+                                    ? "scale-[1.1] z-20 opacity-100 shadow-[0_0_30px_rgba(130,69,236,0.6)]"
+                                    : "scale-95 opacity-50 shadow-none"
                                 }`}
                             style={{
                                 width: "100%",
@@ -74,7 +86,6 @@ const SwiperCoverflow = ({ certificates }) => {
                                 backgroundRepeat: "no-repeat",
                                 backgroundPosition: "center",
                                 backgroundColor: "#0d0b1e",
-                                boxShadow: index === activeIndex ? "0 0 30px rgba(130, 69, 236, 0.6)" : "none",
                             }}
                         />
                     </SwiperSlide>
