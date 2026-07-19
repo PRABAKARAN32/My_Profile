@@ -58,7 +58,7 @@ const Footer = () => {
             },
             {
               icon: <FaLinkedin title="LinkedIn" />,
-              link: "https://www.linkedin.com/in/prabakaran-j-989982265",
+              link: "https://www.linkedin.com/in/prabakaran32",
             },
             {
               icon: <FaGitlab title="GitLab" />,
