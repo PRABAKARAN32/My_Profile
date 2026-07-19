@@ -40,16 +40,14 @@ const About = () => {
           </h3>
           {/* About Me Paragraph */}
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-            I am a Computer Science and Design graduate with a strong interest
-            in Software Engineering, Full Stack Development, and DevOps. I have
-            hands-on experience with the MERN stack, Linux, AWS, and Azure
-            through academic projects, internships, and self-learning. I enjoy
-            building scalable and reliable software solutions while continuously
-            exploring new technologies. Passionate about problem-solving and
-            continuous learning, I am eager to apply my technical skills in a
-            collaborative environment. As a fresher, I look forward to
-            contributing to innovative projects, delivering high-quality
-            software, and growing as a software engineer.
+            I am a Computer Science and Design graduate passionate about
+            Software Engineering, Full Stack Development, and DevOps. I enjoy
+            building scalable web applications and cloud-based solutions using
+            the MERN stack, Linux, AWS, and Azure. I love solving real-world
+            problems, learning new technologies, and writing clean, efficient
+            code. As a fresher, I am eager to contribute to impactful projects,
+            collaborate with talented teams, and continuously grow as a software
+            engineer.
           </p>
           {/* Resume Button */}
           <a
