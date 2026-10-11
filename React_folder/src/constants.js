@@ -130,6 +130,7 @@ export const experiences = [
   //     "CI pipeline",
   //   ],
   // },
+
   {
     id: 0,
     img: Endava,
