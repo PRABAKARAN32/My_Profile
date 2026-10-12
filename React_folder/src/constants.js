@@ -45,6 +45,7 @@ import todoLogo from "./assets/project_logo/todo.png";
 import thumblifyLogo from "./assets/project_logo/thumblify.png";
 import docforgeLogo from "./assets/project_logo/docforge.png";
 import flipearnLogo from "./assets/project_logo/flipearn.png";
+import emailclassifier from "./assets/project_logo/emailclassifier.png";
 
 // Experience Section Logo's
 import Endava from "./assets/work_logo/endava.png";
@@ -186,6 +187,23 @@ export const education = [
 export const projects = [
   {
     id: 0,
+    title: "AI-Email-Classifier",
+    description:
+      "This project implements an AI-driven system that automatically processes customer emails for a fashion retail store using Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG).The system intelligently classifies emails, processes product orders based on stock availability, answers product inquiries using a scalable retrieval approach, and generates professional customer-ready responses. All results are exported into a structured Excel file.",
+    image: emailclassifier,
+    tags: [
+      "Python",
+      "OpenAI GPT-5-nano",
+      "LangChain",
+      "FAISS",
+      "Pandas",
+      "OpenPyXL",
+    ],
+    github: "https://github.com/PRABAKARAN32/AI-Email-Classifier",
+    // webapp: "https://pypi.org/project/pydocforge/",
+  },
+  {
+    id: 1,
     title: "DocForge",
     description:
       "DocForge is a local-first documentation sync engine that keeps a RAG knowledge base fresh without wasteful full rebuilds. It crawls documentation sites with Crawl4AI, normalizes each page to markdown, and hashes the content to detect exactly what changed since the last run — deleting stale chunks and re-embedding only new or modified pages. Vector storage is flexible: run Qdrant in Docker, embed it on disk with zero infrastructure, or point at a managed cluster. Local embeddings via fastembed keep everything on-device, with optional GPU acceleration. Beyond the CLI (sync, diff, search, status), DocForge ships an MCP server exposing list_docs and search_docs, letting any MCP-capable LLM client — Claude Code, Claude Desktop, LM Studio — query live, current documentation mid-conversation instead of relying on stale training data.",
@@ -207,7 +225,7 @@ export const projects = [
     webapp: "https://pypi.org/project/pydocforge/",
   },
   {
-    id: 1,
+    id: 2,
     title: "Thumblify",
     description:
       "Thumblify is an AI-powered thumbnail generator built for social media platforms like YouTube, Instagram, and Facebook. You give it a prompt, it gives you a clean, styled thumbnail — simple as that.",
@@ -233,7 +251,7 @@ export const projects = [
     webapp: "https://thumblify.prabakaran.work",
   },
   {
-    id: 2,
+    id: 3,
     title: "FlipEarn",
     description:
       "FlipEarn is a full-stack marketplace where users buy and sell social media accounts — Instagram, YouTube, TikTok, and Twitter/X. Sellers list accounts and submit credentials securely; buyers browse listings, chat with sellers, and complete purchases through the platform. An admin panel oversees credential verification, secure handover, transactions, and withdrawals, ensuring trust on both sides of the exchange.Built with React 19, Vite, Redux Toolkit, and Tailwind CSS on the frontend, and Node.js, Express 5, and Prisma ORM on the backend, it uses Neon (serverless PostgreSQL) for data, Clerk for authentication, ImageKit for media, and Inngest for background jobs and webhooks.",
@@ -255,7 +273,7 @@ export const projects = [
     webapp: "https://flipearn.prabakaran.work/",
   },
   {
-    id: 3,
+    id: 4,
     title: "EMP - Email Auto Sender",
     description:
       "EMP is an intelligent email scheduling and automation system designed to simplify the process of sending emails at a specific time without manual intervention. Users can compose an email, select a future date and time, and the system will automatically deliver the email when the scheduled time arrives. This project focuses on increasing productivity, saving time, and ensuring timely communication, whether for personal reminders, business follow-ups, or marketing campaigns.",
@@ -274,7 +292,7 @@ export const projects = [
     // webapp: "https://emp.prabakaran.tech",
   },
   {
-    id: 4,
+    id: 5,
     title: "Flames App",
     description:
       "This is the project I developed using HTML, CSS, and JavaScript to create a FLAMES app. The app takes two names as input and calculates the relationship result based on the traditional FLAMES game logic, offering an interactive and fun user experience with a simple and attractive interface.",
@@ -292,7 +310,7 @@ export const projects = [
     // webapp: "https://app.prabakaran.tech/",
   },
   {
-    id: 5,
+    id: 6,
     title: "My-Portfolio",
     description:
       "This is the portfolio website I developed to showcase my skills, projects, and professional background. It offers an interactive and responsive experience, featuring sections like About Me, Skills, Projects, and Contact, all designed with a clean and user-friendly interface to effectively present my work and achievements.",
@@ -311,7 +329,7 @@ export const projects = [
     webapp: "https://prabakaran.work",
   },
   {
-    id: 6,
+    id: 7,
     title: "TODO App",
     description:
       "This is a simple TODO app I developed using React.js, which allows users to create, manage, and organize their tasks efficiently. The app features a user-friendly interface for adding, editing, and deleting tasks, along with functionalities like task completion status and filtering options to enhance productivity and task management.",
